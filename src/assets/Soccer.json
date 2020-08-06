@@ -1,0 +1,51 @@
+[
+    {
+        "id":1,
+        "leugeName":"EPL",
+        "time":"14:00",
+        "awayTeam":"Arsenal",
+        "homeTeam":"Chiefs",
+        "homePrice":0.9,
+        "awayPrice":1.5,
+        "draw":0.8,
+        "BetType":"Full Time"
+     
+    },
+    {
+        "id":2,
+        "leugeName":"EPL",
+        "time":"14:00",
+        "awayTeam":"Manchester",
+        "homeTeam":"Pirates",
+        "homePrice":0.9,
+        "awayPrice":1.5,
+        "draw":2.5,
+        "BetType":"Full Time"
+     
+    },
+    {
+        "id":3,
+        "leugeName":"EPL",
+        "time":"14:00",
+        "awayTeam":"Manchester",
+        "homeTeam":"Liverpool",
+        "homePrice":0.9,
+        "awayPrice":1.5,
+        "draw":1.5,
+        "BetType":"Full Time"
+
+     
+    },
+    {
+        "id":4,
+        "leugeName":"EPL",
+        "time":"14:00",
+        "awayTeam":"Barcelona",
+        "homeTeam":"Real Madrid",
+        "homePrice":0.9,
+        "awayPrice":1.5,
+        "draw":0.29,
+        "BetType":"Full Time"
+     
+    }
+]

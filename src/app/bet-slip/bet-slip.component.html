@@ -1,0 +1,236 @@
+<div class="row mt-2">
+    <div class="col-12-fluid mr-2">
+        <div class="card text-white ">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-8">
+                        <span class="betsli-head-text"> Bet Slip ({{count}})</span>
+                       
+                    </div>
+                    <div class="col-4">
+                        <ng-template [ngIf]="count>1">
+
+                            <button class="clear-button" (click)="clearBetslip()">
+                               <span class="clear-text">Clear</span>  <i class="fa fa-times"></i>
+                            </button>
+                        </ng-template>
+                    </div>
+                </div>
+            </div>
+
+
+            <ng-template [ngIf]="count==0">
+                <div class="container info-container" >
+                    <p class="card-text card-info">
+                        <strong>To place a bet: </strong> Choose the sport, tournament and event that you would like to
+                        bet on. Then select a market by clicking the odds that you would like to bet on</p>
+                </div>
+            </ng-template>
+
+            <div class="card-body bet-slip-card">
+                <div class="media " *ngFor="let i of item" style="min-width: 100% !important; ">
+                    <div class="media-body" >
+                        <div class="row mt-2">
+                            <div class="col-9 mt-2 ">
+                                <p style="font-size: 14px; margin-left: -7px;">
+                                    {{item.indexOf(i)+1}}. {{i.event.betType}} {{i.punterBetChoice}}
+                                </p>
+                            </div>
+                            <div class="col-3 mt-2">
+                                <button class="remove-item" (click)="removeFromBetSlip(i)"
+                                   >
+                                    <i class="fa fa-times"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-10 mt-2">
+                                <p style="font-size: small;">
+                                    {{i.event.sportName}} {{i.selectionOdds}} <br>
+                                    {{i.event.tournamentName}} <br>
+                                    {{i.event.EeventName}} <br>
+                                    {{i.event.EeventDate |  date : " MMMM,dd,yyyy"}}
+                                </p>
+                                <p class="justify-content-center bet-warning" ><strong>{{i.message}}</strong>
+                                </p>
+
+                            </div>
+                            <div class="col-2 mt-2">
+                                {{i.selectionOdds}}
+                            </div>
+                        </div>
+
+
+                        <!-- INpu for stake -->
+                        <div class="row stake-input">
+                            <div class="col-6">
+                                <label style="font-size:small;">
+                                    Stake : R <input appcurrencyformatter="" #box
+                                        (Keyup)="onKeyStake(box.value,i.selectionOdds,i.id)"
+                                        (click)="onKeyStake(box.value,i.selectionOdds,i.id)" value="{{i.stake}}"
+                                        class="form-control stake-input-box input-sm ng-pristine ng-valid ng-touched spinner"
+                                        min="1" type="number">
+                                </label>
+                            </div>
+
+                            <div class="col-6">
+                                <label style="font-size:small;">
+                                    Payout : R
+                                    <input appcurrencyformatter="" #payout
+                                        (Keyup)="onKeyPayout(payout.value,i.selectionOdds,i.id)"
+                                        (click)="onKeyPayout(payout.value,i.selectionOdds,i.id)" value="{{i.payout}}"
+                                        class="form-control stake-input-box input-sm ng-pristine ng-valid ng-touched spinner"
+                                        min="1" type="number">
+                                </label>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <!-- Book Bet button -->
+                <ng-template [ngIf]="count===1">
+                    <div class="row">
+                        <button type="button" class="btn btn-outline-secondary text-white"
+                            style="min-width: 100% !important;" (click)="createBetEvent(item)">BOOK THIS BET</button>
+                            <!-- createBetEvent -->
+                            <!-- placeBet -->
+                        </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <h4>Total Cost :R {{betSlipFinal}}</h4>
+                        </div>
+                    </div>
+                </ng-template>
+
+
+            </div>
+        </div>
+
+          <!-- MUltiple section -->
+        <ng-template [ngIf]="count>1">
+            <div class="row">
+                <div class="col-md-12">
+                    
+                    <div class="card text-white d-flex text-nowrap" >
+                        <div class="card-header" >
+                            Multiple
+                        </div>
+                        <div class="card-body text-center ">
+                            <div class="row d-flex text-nowrap justify-content-around multiple-body">
+                                <div class="col-3">
+                                    <p class="card-text">Odds</p>
+                                    <p>{{multipleOdds}}</p> 
+                                </div>
+                                <div class="col-3">
+                                    <p>Bonus %</p>
+                                    <p>{{bonus}}%</p>  
+                                </div>
+                                <div class="col-6">
+                                    <p>Final Odds</p>
+                                    <p>{{finalOdds}}</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <p>
+                                        <a class="text-white" data-toggle="collapse" href="#collapseExample"
+                                            role="button" aria-expanded="false" aria-controls="collapseExample">
+                                            Show Bonus Table
+                                        </a>
+                                    </p>
+                                    <div class="collapse" id="collapseExample">
+                                        <table class=" table table-bordered text-white">
+                                            <thead>
+                                                <tr>
+                                                    <th>Legs</th>
+                                                    <th>Bonus Percent</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr *ngFor="let bonus of bonusTable">
+                                                    <td>{{bonus.Legs}}</td>
+                                                    <td>{{bonus.BonusPercent}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-12">
+                                    <ng-template [ngIf]="_isBetRelated===false">
+                                        <button type="button" class="btn btn-primary btn-block btn-ok"
+                                       (click)="createBetEvent(item)">BOOK MULTIPLE</button>
+                                    </ng-template>
+                                    <ng-template [ngIf]="_isBetRelated">
+                                        <button type="button" class="btn btn-primary btn-block text-wrap btn-error"><small>You Can Not Take A Multiple From The Same Leg</small></button>
+
+                                    </ng-template>
+                                   
+                                    <hr style="border: 0.5px solid white;">
+                                </div>
+                                <div class="row multiple-row">
+                                    <div class="col-6">
+
+                                        <label style="font-size:small;">
+                                            Stake : R <input appcurrencyformatter="" #box
+                                                (Keyup)="onKeyMultipleStake(box.value)"
+                                                (click)="onKeyMultipleStake(box.value)" value="{{multipleStake}}"
+                                                class="form-control stake-input-box input-sm ng-pristine ng-valid ng-touched spinner"
+                                                min="1" type="number">
+                                        </label>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <label style="font-size:small;">
+                                            Payout : R
+                                            <input appcurrencyformatter="" #payout
+                                                (Keyup)="onKeyMultiplePayout(payout.value)"
+                                                (click)="onKeyMultiplePayout(payout.value)" value="{{multiPayout}}"
+                                                class="form-control stake-input-box input-sm ng-pristine ng-valid ng-touched spinner"
+                                                min="1" type="number">
+                                        </label>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <!-- <h4>Total Cost :R {{betSlipFinal}}</h4> -->
+                                </div>
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+        <div class="card bg-dark text-white mt-2 betslip-image" >
+            <img class="card-img"
+                src="https://hollywoodmedia.hollywoodbets.net/images/cms/new-website/images/go-back-to-old-website.gif"
+                alt="">
+            <div class="card-img-overlay">
+            </div>
+        </div>
+
+        <div class="mt-1">
+            <button type="button" class="btn btn-primary betButton mt-1" style="min-width: 100%!important;">Upload
+                FICA</button>
+            <button type="button" class="btn btn-primary betButton mt-1" style="min-width: 100%!important;">
+                Sports Blog</button>
+            <button type="button" class="btn btn-primary betButton mt-1" style="min-width: 100%!important;">
+               Social Responsibility </button>
+            <button type="button" class="btn btn-primary betButton mt-1" style="min-width: 100%!important;">
+                Soccer Betting News</button>
+            <button type="button" class="btn btn-primary betButton mt-1" style="min-width: 100%!important;">
+                Winning Form</button>
+            <button type="button" class="btn btn-primary betButton mt-1" style="min-width: 100%!important;">
+                Horse Racing Analysis and Tips</button>
+            <button type="button" class="btn btn-primary betButton mt-1" style="min-width: 100%!important;">
+                Become an Affiliate</button>
+        </div>
+
+    </div>
+
+</div>

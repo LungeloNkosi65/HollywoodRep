@@ -1,0 +1,17 @@
+.navbar{
+    background-color:#474747;
+}
+.middle-nav{
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-bottom:solid #643e94;
+}
+.container-fluid{
+    background-color: #1e1e1e;
+}
+
+.thirdrow{
+    color: white;
+}

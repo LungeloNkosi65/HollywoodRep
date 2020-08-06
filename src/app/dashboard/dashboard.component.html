@@ -1,0 +1,154 @@
+<div class="container-fluid ml-2 ">
+  <div class="row">
+    <div class="col-md-12 ">
+      <div class="card bg-dark text-white">
+        <img src="https://hollywoodmedia.hollywoodbets.net/images/cms/new-website/images/max-payout.png" alt=""
+          style="max-width: 100% !important;">
+      </div>
+    </div>
+  </div>
+  <div class="row mt-2" style="min-width: 100% !important;">
+    <div class="col-md-6 ">
+      <table class="table table-dark text-white" style="width: 100%;">
+        <thead>
+          <tr style="background-color: #333333 ;max-height: 25px!important;">
+            <th scope="col">Todays Soccer</th>
+          </tr>
+
+        </thead>
+        <!-- <tr class="btn-head">
+          <td class="btn-head-row">Group By: <button type="button" name="" id="" class="btn btn-primary" btn-lg btn-block>Time</button> 
+            <button type="button"name="" id="" class="btn btn-primary"  btn-lg  btn-block>Country</button>
+          </td>
+
+        </tr> -->
+        <tr>
+          <td class="dash-col"></td>
+        </tr>
+        <tr class="p-time"   *ngFor="let soccerbet of soccerBets| slice: 0:4">
+          <p >{{soccerbet.time}} &nbsp;&nbsp;
+            {{soccerbet.homeTeam}} vs {{soccerbet.awayTeam}}</p>
+          <div class="btn-group w-100" role="group" aria-label="Basic example">
+            
+            <button type="button" class="btn btn-secondary "(click)="addEventToBetSlip(soccerbet,'Away',soccerbet.awayPrice)">
+              <span class="name">
+                {{soccerbet.homeTeam}}
+              </span>
+              <span class="price">
+                {{soccerbet.homePrice}}
+              </span>
+              </button>
+              
+              <button type="button" class="btn btn-secondary "(click)="addEventToBetSlip(soccerbet,'Away',soccerbet.awayPrice)">
+                <span class="name">
+                  Draw
+                </span>
+                <span class="price">
+                  {{soccerbet.draw}}
+                </span>
+                </button>
+              <button type="button" class="btn btn-secondary punterchoice"(click)="addEventToBetSlip(soccerbet,'Away',soccerbet.awayPrice)">
+                <span class="name">
+                  {{soccerbet.awayTeam}}
+                </span>
+                <span class="price">
+                  {{soccerbet.awayPrice}}
+                </span>
+                </button>
+          </div>
+        </tr>
+      </table>
+
+    </div>
+
+    <!-- <div class="col-md-6">
+      <table class="table table-dark text-white" style="width: 100%;">
+        <thead>
+          <tr style="background-color: #333333 ;max-height: 25px!important;">
+            <th scope="col">Todays Soccer</th>
+          </tr>
+
+        </thead>
+        <tr class="btn-head">
+          <td class="btn-head-row">Group By: <button type="button" name="" id="" class="btn btn-primary" btn-lg btn-block>Time</button> 
+            <button type="button"name="" id="" class="btn btn-primary"  btn-lg  btn-block>Country</button>
+          </td>
+
+        </tr>
+        <tr>
+          <td class="dash-col"></td>
+        </tr>
+        <tr class="p-time"   *ngFor="let soccerbet of cuponAssociations| slice: 0:4">
+          <p > &nbsp;&nbsp;
+            {{soccerbet.event.EventName}}</p>
+          <div class="btn-group w-100" role="group" aria-label="Basic example">
+            <div *ngFor="let m of soccerbet.soccerCupon">
+              <button type="button" class="btn btn-secondary "(click)="addEventToBetSlip(soccerbet,'Away',soccerbet.awayPrice)">
+                <span class="name">
+                  {{m.MarketName}}
+                </span>
+                <span class="price">
+                  {{m.Odds}}
+                </span>
+                </button>
+            </div>
+
+         
+          </div>
+        </tr>
+      </table>
+    </div> -->
+    <div class="col-md-6 ">
+      <table class="table table-dark text-white" style="width: 100%;">
+        <thead>
+          <tr style="background-color: #333333 ;max-height: 25px!important;">
+            <th scope="col">Todays Soccer</th>
+          </tr>
+
+        </thead>
+        <!-- <tr class="btn-head">
+          <td class="btn-head-row">Group By: <button type="button" name="" id="" class="btn btn-primary" btn-lg btn-block>Time</button> 
+            <button type="button"name="" id="" class="btn btn-primary"  btn-lg  btn-block>Country</button>
+          </td>
+
+        </tr> -->
+        <tr>
+          <td class="dash-col"></td>
+        </tr>
+        <tr class="p-time"   *ngFor="let soccerbet of soccerBets| slice: 0:4">
+          <p >{{soccerbet.time}} &nbsp;&nbsp;
+            {{soccerbet.homeTeam}} vs {{soccerbet.awayTeam}}</p>
+          <div class="btn-group w-100" role="group" aria-label="Basic example">
+            
+            <button type="button" class="btn btn-secondary "(click)="addEventToBetSlip(soccerbet,'Away',soccerbet.awayPrice)">
+              <span class="name">
+                {{soccerbet.homeTeam}}
+              </span>
+              <span class="price">
+                {{soccerbet.homePrice}}
+              </span>
+              </button>
+              
+              <button type="button" class="btn btn-secondary "(click)="addEventToBetSlip(soccerbet,'Away',soccerbet.awayPrice)">
+                <span class="name">
+                  Draw
+                </span>
+                <span class="price">
+                  {{soccerbet.draw}}
+                </span>
+                </button>
+              <button type="button" class="btn btn-secondary punterchoice"(click)="addEventToBetSlip(soccerbet,'Away',soccerbet.awayPrice)">
+                <span class="name">
+                  {{soccerbet.awayTeam}}
+                </span>
+                <span class="price">
+                  {{soccerbet.awayPrice}}
+                </span>
+                </button>
+          </div>
+        </tr>
+      </table>
+
+    </div>
+  </div>
+</div>

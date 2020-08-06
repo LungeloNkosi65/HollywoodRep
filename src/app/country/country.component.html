@@ -1,0 +1,76 @@
+<div class="container ml-2">
+    <div class="row">
+        <div class="col-md-12">
+            <div *ngFor="let tournament of tData">
+                <div class="media mt-1 text-white p-3" style="background-color: #1e1e1e;">
+                    <div class="media-body">
+                        <button type="button" class="close" aria-label="Close"
+                            (click)="removeTournamen(tournament.id);">
+                            <span aria-hidden="true" style="color: red!important;">&times;</span>
+                        </button>
+                        <div class="row ml-2">
+                            <div class="col-md-4">
+                                <a class="d-flex">
+                                    <img src="https://www.countryflags.io/{{tournament.country.Flag}}/flat/24.png"
+                                        alt="">
+                                    <h6 class="country-n mt-2">
+                                        {{tournament.country.CountryName}}
+                                    </h6>
+                                </a>
+                            </div>
+                            <div *ngFor="let thonament of tournament.tournaments">
+                                <div class="col-md-12">
+                                    <div class="media-body p-2" style="background-color: #333333;"
+                                        (click)="showEvents(thonament.TournamentId,thonament.Name)">
+                                        <small>
+                                            <input type="checkbox">
+                                            {{thonament.Name}}
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row ml-2 ">
+    <div *ngFor="let country of countries" [class.selected]="country===countries" (click)="onSelect(country)">
+        <a class="text-white">
+            <div class="media ml-1 p-2 mt-1 mb-1 country-show"
+                >
+                <a class="d-flex ">
+                    <img src="https://www.countryflags.io/{{country.Flag}}/flat/24.png" alt="">
+                </a>
+                <div class="media-body">
+                    <h5 class="text-white country-n"   (click)="selectedCountry(country.CountryId)" >{{country.CountryName}}</h5>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>

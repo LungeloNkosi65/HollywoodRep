@@ -1,0 +1,66 @@
+.card-side{
+    background-color: #2c1d40;
+    min-width: 100%;
+}
+.containerX{
+    max-height: 700px;
+    overflow-y: auto;
+    min-width: 240px !important;
+    background-color: #2b2b2b!important;
+    min-width: 230px !important;
+    margin-right: 3px !important;
+}
+.media{
+    box-shadow: 1px 1px 1px 1px black;
+    min-width: 100% !important;
+}
+.media-body{
+    background-color: #2b2b2b;
+    min-height: 50px;
+}
+.media-body:hover{
+background-color: purple !important;
+}
+.btn-secondary{
+    font-size: 10px !important;
+}
+
+.gradient-buttons .btn {
+    background-image: linear-gradient(to bottom, rgba(255,255,255,.5), rgba(100,62,148) 49%, rgba(100,62,148) 51%, rgba(100,62,148));
+    background-repeat: repeat-x;
+}
+.gradient-buttons .btn:hover {
+    background-image: linear-gradient(to bottom, rgba(10,10,10), rgba(255,255,255,.5) 69%, rgba(10,10,10) 51%, rgba(10,10,10));
+    background-repeat: repeat-x;
+}
+h5{
+    font-size: smaller;
+    font-family: sans-serif;
+    color: white;
+}
+.btn-group{
+    border-radius: 0px !important;
+    min-width: 100% !important;
+}
+
+.card-search{
+    background-color: #643e94;
+    border-radius: 0px;
+    min-width: 100%;
+    height: 60px;
+}
+.form-control{
+    border-radius: 0px;
+    min-width: 100%!important;
+    height: 35px;
+    margin-top: -8px;
+}
+.d-flex{
+    background-color: #643e94;
+}
+
+.sport-name{
+    /* text-align: center; */
+    font-size: 14px;
+    margin-left: 15px !important;
+}

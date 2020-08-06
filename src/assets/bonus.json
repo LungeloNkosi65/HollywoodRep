@@ -1,0 +1,26 @@
+[
+    {
+        "legs":2,
+        "bonuspercent":2.5
+    },
+    {
+        "legs":3,
+        "bonuspercent":3
+    },
+    {
+        "legs":4,
+        "bonuspercent":3.5
+    },
+    {
+        "legs":5,
+        "bonuspercent":10
+    },
+    {
+        "legs":11,
+        "bonuspercent":15
+    },
+    {
+        "legs":15,
+        "bonuspercent":18
+    }
+]

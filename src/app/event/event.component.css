@@ -1,0 +1,123 @@
+.dropdown-item:hover{
+    background-color: #333333 !important;
+}
+.dropdown-menu {
+  background-color: #1e1e1e!important;
+  color: white !important;
+
+}
+
+.row-border:after{
+    display: block !important;
+    border-bottom: 1px solid #ccc;
+    margin: 0 15px !important;
+}
+.btn-group{
+    min-width: 100% !important ;
+}
+
+
+.table thead th{
+    border-bottom: 0px!important;
+  }
+  .table th, .table td{
+    border-top: 1px solid #000000!important;
+  }
+  
+  table {
+    table-layout: fixed ;
+    width: 100% ;
+  }
+
+  td {
+    width: 25% ;
+  }
+
+  .btn-secondary{
+    height: 100%; 
+    background-color: transparent !important;
+     border-color: transparent !important;
+  }
+
+
+.event-head{
+  background-color: #004369 !important;
+}
+.event-name{
+  margin-top:20px ;
+  font-size: 13px;
+
+}
+.tooltiptext{
+
+}
+
+.btn-primary{
+  background-color: rgb(40,40,40) !important;
+  border: #0a0a0a!important ;
+  margin-left: 2px !important;
+  height: 30px !important;
+ 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* align-items: center !important; */
+}
+.btn-text{
+  bottom: 40px !important;
+  font-size: smaller !important;
+  
+
+
+}
+.row-h{
+  background-color: #333333!important;
+}
+.thead{
+  background-color: #1e1e1e!important;
+}
+
+.media{
+  min-width: 100%!important;
+}
+.t-name{
+  color: white;
+  background-color: transparent !important;
+}
+
+
+
+
+
+
+.btn-primary .market-name{
+  white-space: nowrap;
+    display: inline-block;
+    width: 40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 10px;
+  }
+.btn-primary .market-odd{
+  /* white-space: nowrap; */
+  color: #fcbf12 !important;
+  white-space: nowrap;
+  display: inline-block;
+  width: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 10px;
+  }
+  .event-time{
+  font-size: 12px;
+  }
+   
+  /* .btn-primary .odds{
+  color: #fcbf12 !important;
+  font-size: 12px;
+  margin-left: 20px;
+  margin-bottom: 20px !important;
+  white-space: nowrap;
+  display: inline-block;
+  bottom: 40px !important;   
+  padding-bottom: 200px !important;
+  } */

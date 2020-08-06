@@ -1,0 +1,143 @@
+<div class="container ml-2">
+
+  <!-- <div class="row justify-content-between" style="background-color: #004369 !important;">
+
+    <div class="col-md-9" >
+
+      <div class="text-white mt-2" style="color: white; background-color: transparent !important;">
+        <h5>{{_tournamentName}}</h5>
+      </div>
+
+    </div>
+
+    <div class="col-md-3" >
+      <div class="dropdown" align="right" style="padding: 0%!important; background-color: transparent !important;">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="triggerId" data-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false">
+          {{betTypeOne.BetTypeName}}
+        </button>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="triggerId">
+          <div *ngFor="let bet of betTypes">
+            <a  class="dropdown-item" (click)="selectedBetType(bet)">{{bet.BetTypeName}}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+  <div class="row justify-content-between">
+    <div class="col-md-12">
+
+      <table>
+        <thead class="event-head">
+          <tr>
+            <th scope="col-md-9">
+              <div class="text-white mt-2 ml-2 t-name">
+                <h5>{{_tournamentName}}</h5>
+              </div>
+            </th>
+            <th scope="col-md-3">
+              <div class="dropdown" align="right"
+                style="padding: 0%!important; background-color: transparent !important;">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="triggerId" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  {{betTypeOne.BetTypeName}}
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="triggerId">
+                  <div *ngFor="let bet of betTypes">
+                    <a class="dropdown-item" (click)="selectedBetType(bet)">{{bet.BetTypeName}}</a>
+                  </div>
+                </div>
+              </div>
+            </th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <table *ngFor="let ev of eventMarkets" class="table text-white mt-2">
+        <thead class="thead">
+          <tr>
+            <th scope="row">
+              <h6>{{ev.events.EeventDate | date : "EEEE,MMMM,dd,yyyy"}}</h6>
+            </th>
+            <th></th>
+            <td></td>
+            <td></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row-h">
+            <th scope="row" class="event-time">19:30</th>
+            <td class="event-name">
+              {{ev.events.EventName}}
+              
+            </td>
+            <td>
+              <div class="col-md-12 btn-group" role="group" aria-label="Basic example"
+                style="min-width:200%!important;flex-wrap: wrap !important;">
+                <div *ngFor="let m of ev.markets">
+                  <div *ngIf="(m.BetTypeId==betTypeOne.BetTypeId)" class="media">
+                    <button type="button" class="btn btn-primary" (click)="addEventToBetSlip(ev.events,m,m.Odds)">
+                        <span class="market-name"data-toggle="tooltip" data-placement="top" title="Tooltip on top">
+                          <!-- {{m.MarketName}}  -->
+                          {{setMarketName(ev.events.EventName,m.MarketName)}}
+                        </span>
+                        <span class="market-odd">{{m.Odds}}</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+<script>
+  
+</script>
+<!-- <div class="container">
+  <div class="row justify-context-between">
+    <div class="col-md-12">
+      <table>
+        <thead class="thead" style="background-color: #1e1e1e !important;">
+        </thead>
+        <tbody>
+          <tr *ngFor="let ev of ev.events">
+           <td>
+
+           </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div> -->
+

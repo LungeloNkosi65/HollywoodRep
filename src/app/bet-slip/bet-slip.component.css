@@ -1,0 +1,138 @@
+.betButton{
+    border-radius: 0px!important;
+    background-color: #643e94!important;
+    border-color:#643e94!important ;
+    font-size: smaller !important;
+}
+.betButton:hover{
+    background-image: linear-gradient(to bottom, rgba(10,10,10), rgba(255,255,255,.5) 69%, rgba(10,10,10) 51%, rgba(10,10,10));
+    background-repeat: repeat-x;
+}
+.card{
+    font-size: smaller;
+    background-color: #2b2b2b;
+    min-width: 100 !important;
+    border-color: transparent;
+ 
+}
+.betsli-head-text{
+    color: white !important;
+    font-size: 17px !important;
+    padding-right: 2px !important;
+}
+.card-body{
+    
+    margin-top: 4px;
+}
+.card-header{
+    background-color: #643e94;
+    border-radius: 0px; 
+    min-width: 100 !important;
+}
+.colm{
+    margin-right: 110rem !important;
+
+}
+.card-body{
+    border: yellow !important;
+    border-color: yellow !important;
+}
+.btn-outline-secondary{
+    border-color: purple !important;
+    background-color: purple !important;
+    color: white;
+    min-width: 100% !important;
+}
+
+.btn-outline-secondary:hover{
+    background-color: #2b2b2b !important;
+}
+.btn-outline-secondary{
+    min-width: 100% !important;
+    color: white !important;
+}
+.table {
+    color: white !important;
+    border: 2px solid green !important;
+
+   }
+
+   .clear-button{
+    background-color: transparent; 
+    color: #d9534f;
+     border: none; 
+    font-size: 17px; 
+    margin-left: auto;
+   }
+   .clear-text{
+       color: white !important;
+       font-size: 17px; 
+
+   }
+   .info-container{
+    justify-content: center !important; 
+    padding-top: 10px !important;
+   }
+
+   .card-info{
+    border-color: transparent; 
+    background-color: #2b2b2b; 
+     min-width: 100 !important;
+   }
+
+   .bet-slip-card{
+    min-width: 100% !important;
+     max-height: 600px !important; 
+    overflow-y: auto !important;
+   }
+
+   .media-body{
+    margin-top: -25px;
+     margin-bottom: 20px;
+   }
+   .remove-item{
+    background-color: transparent; 
+    color: #d9534f;
+     border: none; 
+     font-size: 17px;
+   }
+   .bet-warning{
+    color: yellow;
+   }
+
+   .stake-input{
+    align-content: center!important;
+    justify-content: center!important;
+    display: flex!important; 
+    margin-top:white !important; 
+    border-bottom:solid 2px white !important ;
+   }
+   .multiple-body{
+    color: chartreuse !important;
+   }
+
+   .btn-ok{
+    background:greenyellow;
+    border:greenyellow !important ;
+    min-width: 100% !important;
+   }
+   .btn-error{
+    background:orangered !important;
+    border:orangered !important ;
+    min-width: 100% !important;
+   }
+   .multiple-row{
+    align-content: center!important;
+    justify-content: center!important;
+    display: flex!important;
+     margin-top:white !important;
+   }
+
+   .betslip-image{
+    min-width: 100% !important;
+   }
+.betslip-image .card-img{
+    min-width: 100% !important;
+}
+
+   

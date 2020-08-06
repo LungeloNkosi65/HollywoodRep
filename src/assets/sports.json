@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "Betgames Africa",
+        "imageUrl": "https://new.hollywoodbets.net/assets/images/icons/soccer.svg"
+     
+    },
+    {
+        "id": 2,
+        "name": "Live In-Play",
+        "imageUrl": "https://new.hollywoodbets.net/assets/images/icons/live-in-play.svg"
+     
+    },
+    {
+        "id": 3,
+        "name": "Sport Exotics",
+        "imageUrl": "https://new.hollywoodbets.net/assets/images/icons/sport-exotics.svg"
+     
+    },
+    {
+        "id": 4,
+        "name": "Horse Racing",
+        "imageUrl": "https://new.hollywoodbets.net/assets/images/icons/horse-racing.svg"
+     
+    },
+    {
+        "id": 5,
+        "name": "Soccer",
+        "imageUrl": "https://new.hollywoodbets.net/assets/images/icons/soccer.svg"
+     
+    },
+    {
+        "id": 6,
+        "name": "Lucky Numbers",
+        "imageUrl": "https://new.hollywoodbets.net/assets/images/icons/lucky-numbers.svg"
+     
+    },
+    {
+        "id": 7,
+        "name": "Soccer",
+        "imageUrl": "https://new.hollywoodbets.net/assets/images/icons/soccer.svg"
+     
+    },
+    {
+        "id": 8,
+        "name": "Soccer",
+        "imageUrl": "https://new.hollywoodbets.net/assets/images/icons/soccer.svg"
+     
+    },
+    {
+        "id": 9,
+        "name": "Soccer",
+        "imageUrl": "https://new.hollywoodbets.net/assets/images/icons/soccer.svg"
+     
+    },
+    {
+        "id": 10,
+        "name": "Soccer",
+        "imageUrl": "https://new.hollywoodbets.net/assets/images/icons/soccer.svg"
+     
+    }
+]

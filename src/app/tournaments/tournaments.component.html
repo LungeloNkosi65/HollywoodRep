@@ -1,0 +1,19 @@
+<div class="col-md-12">
+    <div *ngFor="let t of tournaments">
+        <div class="media-body">
+            <button type="button" class="close" aria-label="Close" >
+                <span aria-hidden="true" style="color: red !important;">&times;</span>
+            </button>
+            <div class="row ml-2">
+                <div class="col-md-4">
+                    <a class="d-flex">
+                        <!-- <img> -->
+                        <h6 class="ml-2">
+                            {{t.Name}}
+                        </h6>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

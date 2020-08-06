@@ -1,0 +1,38 @@
+
+<div class="col-md-12-fluid ">
+   <div class="row">
+        <div class="btn-group gradient-buttons ml-3" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary">Next Race</button>
+            <button type="button" class="btn btn-secondary" (click)="testState()">Next Int. R</button>
+            <button type="button" class="btn btn-secondary">Next Sport</button>
+        </div>
+    </div> 
+       
+        <div class="row mt-2--fluid  ">
+          
+            <div class="card card-search ml-3" >
+                <div class="card-body">
+                    <input class="form-control"  type="search"[(ngModel)]="sport" placeholder="Search" aria-label="Search">
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid  containerX " >
+            <div class="media mt-2"  *ngFor="let sport of sports$ | filter :sport" >
+                <a class="d-flex" href="#" >
+                    <img src="{{sport.Logo}}" width="50" height="50" alt="">
+                </a>
+                <div class="media-body text-nowrap"  (click)="onClick()">
+                    <a  (click)="clickedSport(sport.SportId,sport.Name)" >
+                
+                        <h5 class="text-white mt-3 sport-name" style="">{{sport.Name}} </h5>
+                    </a>
+                </div>
+            </div>
+            
+         
+        </div>
+       
+    
+</div>
+
+    

@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
+
+@import "~bootstrap/dist/css/bootstrap.css";
+
+body{
+    background-color: #0a0a0a;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+   
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #1e1e1e;
+    border-radius: 0%;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #474747;
+    border-radius: 5px;
+
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #474747;
+    
+  }
