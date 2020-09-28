@@ -16,7 +16,7 @@ import { Router } from '@angular/router';
 })
 export class SideNavComponent implements OnInit {
 
-  private jsonUrl="https://localhost:44365/api/sports";
+  
   sportBets: Sport[];
   sport:string;
   sports$:Observable<Sport[]>;

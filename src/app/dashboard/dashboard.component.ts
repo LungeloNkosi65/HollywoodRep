@@ -25,7 +25,8 @@ export class DashboardComponent implements OnInit {
   cuponAssociations:CuponAssociation[]=[];
 
 
-  constructor(private _sport: SportsService, private _betService: BetSlipService, private eventService: EventService) {
+  constructor(private _sport: SportsService, private _betService: BetSlipService, 
+              private eventService: EventService) {
 
   }
 
@@ -36,7 +37,7 @@ export class DashboardComponent implements OnInit {
   }
 
   addEventToBetSlip(event: any, punterChoice: string, odds: number) {
-    console.log('This is the evennt', event);
+    // console.log('This is the evennt', event);
     event = {
       EventId: event.id,
       TournamentId: event.TournamentId,
@@ -65,7 +66,7 @@ export class DashboardComponent implements OnInit {
     this._sport.getCupons().subscribe((data: any) => {
       this.soccerCupons = data;
       this.getSpecificOdds(data);
-      console.log("Cupons ..", this.soccerCupons);
+      // console.log("Cupons ..", this.soccerCupons);
     });
   }
 
@@ -74,7 +75,7 @@ export class DashboardComponent implements OnInit {
     this.eventService.getEventByTournament(3).subscribe((data: any) => {
       this.events = data;
       this.assignEvents(this.events);
-      console.log('Events for tournament', this.events);
+      // console.log('Events for tournament', this.events);
     });
   }
 
@@ -98,7 +99,7 @@ export class DashboardComponent implements OnInit {
           }
         });
       }
-      console.log('Available cupon',this.cuponAssociations);
+      // console.log('Available cupon',this.cuponAssociations);
   }
 
 

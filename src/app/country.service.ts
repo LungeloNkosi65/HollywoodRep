@@ -11,7 +11,7 @@ export class CountryService {
 
 
   private countryUrl = 'https://localhost:44365/api/countries/';
-  private param="GetSportCountry?sportId="
+  private param="GetSportCountry?sportId=";
   clicked: boolean = false;
   constructor(private _http: HttpClient, private errorHandler:ErrorHandlerService) { }
 

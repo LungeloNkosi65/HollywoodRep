@@ -33,9 +33,7 @@ export class CountryComponent implements OnInit {
     this.route.params.subscribe(routeParams => {
       this.resertList();
       this.getCountries();
-     
     });
-
   }
 
 
